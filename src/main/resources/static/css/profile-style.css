@@ -1,12 +1,20 @@
 
 .dataTables_filter{
 	float: left !important;
-	margin-bottom: 30px;
 }
 
-.profile-list{
+.profile-header{
+	height:100px;
+	color:#337ab7;
+}
+
+.profile-container{
 	width: 90%;
 	margin: auto;
+}
+
+.profile-container .container{
+	border: 1px solid black;
 }
 
 .dataTable{
@@ -18,15 +26,21 @@ table#tblProfile{
 }
 
 .profile-container{
-	border: 1px solid black;
-	padding: 20px;	
+	padding: 50px !important;	
 }
 
 .profile-image{
-	height:100px;
-	width:100px
+	height:90px;
+	width:90px
 }
 
-.row{
-	padding-left:50px;	
+.header-buffer{
+	margin:20px;	
+}
+
+.vertical-center{
+	height:100px;
+	display: flex;
+	align-items: center;
+	padding-left:30px !important;
 }

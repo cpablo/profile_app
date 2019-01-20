@@ -24,7 +24,6 @@ public class ProfileController {
 	
 	@GetMapping("/user-profiles/{id}")
 	public Profile retrieveProfile(@PathVariable(value="id") String id) {
-		System.out.println(profileService.getProfile(id).getName().getFirst());
 		return profileService.getProfile(id);
 	}
 }
