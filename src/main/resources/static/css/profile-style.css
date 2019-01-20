@@ -1,0 +1,17 @@
+
+.dataTables_filter{
+	float: left !important;
+}
+
+.profile-list{
+	width: 90%;
+	margin: auto;
+}
+
+.dataTable{
+	cursor:pointer;
+}
+
+table.dataTable.no-footer{
+	border-bottom: 0px !important;
+}

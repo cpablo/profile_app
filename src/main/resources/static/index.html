@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>User Profiles</title>
+		<link rel="stylesheet" href="css/profile-style.css"/>
+		<link rel="stylesheet" href="webjars/datatables/1.10.19/css/jquery.dataTables.min.css"/>
+		
+		<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+		<script src="webjars/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+		
+		
+		<script>
+			$(document).ready(function(){
+				$('#tblProfile').DataTable({
+					paging: false,
+					lengthChange: false,
+					info: false,
+					ajax: {
+						url: 'http://localhost:8080/stratpoint/user-profiles',
+						method: 'GET',
+						dataSrc: '' 
+					},
+					columns: [
+						{ 
+							data: 'name',
+							title: 'Name',	
+							render: function(data, type, row){
+								return data.first + ' ' +data.last
+							}
+						},
+						{ 
+							data: 'age',
+							title: 'Age',
+							className: 'dt-center'
+						},
+						{ 
+							data: 'active',
+							title: 'Active',
+							className: 'dt-center',
+							render: function(data, type, row){
+								var activeCheckbox = '';
+								if (data){
+									activeCheckbox = '<input type="checkbox" checked="checked"/>'
+								} else {
+									activeCheckbox = '<input type="checkbox"/>'
+								}
+								
+								return activeCheckbox;
+							}
+						},
+						{ 
+							data: 'blocked',
+							title: 'Blocked',
+							className: 'dt-center',
+							render: function(data, type, row){
+								var blockedCheckbox = '';
+								if (data){
+									blockedCheckbox = '<input type="checkbox" checked="checked"/>'
+								} else {
+									blockedCheckbox = '<input type="checkbox"/>'
+								}
+								
+								return blockedCheckbox;
+							}
+						}
+					]
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class = "profile-list">
+			<table id="tblProfile" class="stripe"></table>
+		</div>
+	</body>
+</html>
