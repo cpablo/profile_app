@@ -17,7 +17,7 @@ Create a simple app about listing and viewing of profiles from json source. This
 * Maven
 
 # Installation/Deployment
-1. Open command prompt. Change the current directory on any folder you want to run the application.
+1. Open command prompt. Change the current directory to any folder you want to run the application.
 2. Type the following in command prompt:
 ```
   git clone https://github.com/cpablo/profile_app.git
