@@ -1,6 +1,7 @@
 
 .dataTables_filter{
 	float: left !important;
+	margin-bottom: 30px;
 }
 
 .profile-list{
@@ -12,6 +13,20 @@
 	cursor:pointer;
 }
 
-table.dataTable.no-footer{
-	border-bottom: 0px !important;
+table#tblProfile{
+	border: 1px solid gray;
+}
+
+.profile-container{
+	border: 1px solid black;
+	padding: 20px;	
+}
+
+.profile-image{
+	height:100px;
+	width:100px
+}
+
+.row{
+	padding-left:50px;	
 }
